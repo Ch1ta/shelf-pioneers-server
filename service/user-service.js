@@ -65,8 +65,7 @@ const login = async(email, password) => {
 }
 
 const logout = async(refreshToken) => {
-    const token = await tokenService.removeToken(refreshToken);
-    return token;
+    return await tokenService.removeToken(refreshToken);
 }
 
 
@@ -91,8 +90,7 @@ const refresh  = async(refreshToken) => {
 }
 
 const getAllUsers = async() => {
-    const users = UserModel.find();
-    return users;
+    return UserModel.find();
 }
 
 

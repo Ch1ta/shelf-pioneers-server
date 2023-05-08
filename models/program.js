@@ -10,7 +10,7 @@ const ProgramSchema = new mongoose.Schema({
         },
         quiz: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Quiz1'
+            ref: 'Quiz'
         },
         game: {
             type: mongoose.Schema.Types.ObjectId,
