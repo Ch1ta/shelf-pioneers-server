@@ -6,7 +6,7 @@ const schema = new mongoose.Schema({
         type: [{
             question: {type: String, required: true},
             answers: [String],
-            correctIndex: {type: Number, min: 0, max: 20}
+            correctIndex: {type: Number,required:true}
         }], default: []
     },
     timer: {type: Number, default: 15}

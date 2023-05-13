@@ -8,7 +8,7 @@ const {
     refresh,
 } = require('../controllers/user-controller')
 
-const {getSession} = require('../controllers/session-controller')
+const {getCurrentEvent, addEventAnswer} = require('../controllers/session-controller')
 
 
 const router = express.Router();
@@ -26,7 +26,8 @@ router.post('/login', login)
 router.post('/logout', logout)
 router.get('/refresh', refresh)
 
-router.get('/sessions/:link', getSession)
+router.get('/sessions/:link/current-event', getCurrentEvent)
 
+router.patch('/events/:id/add-answer', addEventAnswer)
 
 module.exports = router;
